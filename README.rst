@@ -10,15 +10,12 @@ However, there are two issues with the original json_include,
 Both are addressed in this version.
 
 Source directory is not used any more,
-======================================
 
 For example, json_include path/source.json
-             -----------------------------
+
 Slight change to syntax as well, <> is not used. When relative path is used, it is relative to where the current directory.
-=======================
 
 For example, "..." : "path/file.json"
-             ------------------------
 
 Below is the original README.rst
 ================================
