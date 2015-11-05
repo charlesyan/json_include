@@ -22,11 +22,15 @@ def get_files(dirpath):
 def test_build_json_include():
     dirpath = _path('source')
     for i in get_files(dirpath):
-        yield run_build_json_include, dirpath, i
+    	print i
+#        yield run_build_json_include, dirpath, i
+        yield run_build_json_include, i
 
 
-def run_build_json_include(dirpath, i):
-    rv = build_json_include(dirpath, i)
+#def run_build_json_include(dirpath, i):
+def run_build_json_include(i):
+#    rv = build_json_include(dirpath, i)
+    rv = build_json_include(i)
     expect = read_file(os.path.join(_path('expect'), i))
     print rv
     assert rv.strip() == expect.strip()

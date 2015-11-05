@@ -1,3 +1,25 @@
+json_include is a very helpful tool to partition json files. 
+In many use cases, such as including AWS PolicyDocument, it is very handy.
+
+However, there are two issues with the original json_include,
+
+1. not able to include json files in other directories.
+
+2. confussing separate parameters for source directory and source file.
+
+Both are addressed in the version.
+
+Source directory is not used any more, 
+For example, json_include path/source.json
+
+Slight change to syntax as well, <> is not used. When relative path is used, 
+it is relative to where the current directory.
+For example, "..." : "path/file.json"
+
+Below is the original README.rst
+
+-------------------------------------------------------------------------------
+
 An extension for JSON to support file inclusion
 ===============================================
 
